@@ -2,10 +2,10 @@ import { ClientWrapper } from "@/components/client-wrapper";
 import { getCharacters } from "@/lib/actions";
 
 interface PageProps {
-  searchParams: {
+  searchParams: Promise<{
     status?: string;
     page?: string;
-  };
+  }>;
 }
 
 export default async function HomePage({ searchParams }: PageProps) {
